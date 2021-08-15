@@ -49,7 +49,7 @@ import aiohttp
 from Destroyer.Configs import Config
 
 sedpath = Config.TMP_DOWNLOAD_DIRECTORY
-from firebot import logging
+from Destroyer import logging
 
 logger = logging.getLogger("[--WARNING--]")
 if not os.path.isdir(sedpath):
