@@ -9,7 +9,7 @@ from Destroyer.utils import Destroyer_on_cmd, load_module
 DELETE_TIMEOUT = 5
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="install"))
+@fire.on(Destroyer_on_cmd(pattern="install"))
 async def install(event):
     if event.fwd_from:
         return
@@ -43,7 +43,7 @@ async def install(event):
     await event.delete()
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="pl ?(.*)"))
+@fire.on(Destroyer_on_cmd(pattern="pl ?(.*)"))
 async def _(event):
     lul = event.pattern_match.group(1)
     yesm, nope, total_p = await get_all_modules(event, borg, lul)
