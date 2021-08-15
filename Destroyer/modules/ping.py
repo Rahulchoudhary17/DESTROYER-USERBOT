@@ -10,8 +10,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DESTROYER"
 
 
 
-@Destroyer.on(admin_cmd(pattern="ping$"))
-@Destroyer.on(sudo_cmd(pattern="ping$", allow_sudo=True))
+@fire.on(admin_cmd(pattern="ping$"))
+@fire.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def _(event):
     text = f"""
 ┏━━━┓━━━━━━━━━┓
