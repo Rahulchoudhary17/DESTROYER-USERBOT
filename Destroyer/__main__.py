@@ -11,7 +11,7 @@ from Destroyer import bot
 from Destroyer.Configs import Config
 from Destroyer.utils import load_module, start_assistant
 
-sed = logging.getLogger("firebot")
+sed = logging.getLogger("Destroyer")
 
 
 async def add_bot(bot_token):
