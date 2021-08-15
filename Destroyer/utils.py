@@ -33,7 +33,7 @@ def command(**args):
         return print("stupidity at its best")
     else:
         pattern = args.get("pattern", None)
-        allow_sudo = args.get("allow_sudo", True)
+        allow_sudo = args.get("allow_sudo", False)
         allow_edited_updates = args.get("allow_edited_updates", False)
         args["incoming"] = args.get("incoming", False)
         args["outgoing"] = True
@@ -237,7 +237,7 @@ def Destroyer_on_cmd(pattern=None, **args):
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
-    allow_sudo = args.get("allow_sudo", True)
+    allow_sudo = args.get("allow_sudo", False)
 
     # get the pattern from the decorator
     if pattern is not None:
