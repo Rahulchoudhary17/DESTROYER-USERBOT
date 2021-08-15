@@ -54,8 +54,8 @@ pm_caption += f" ||•|| 𝕊𝔼ℂ𝕌ℝ𝕀𝕋𝕐 𝔹𝕐 𝔻𝔼𝕊�
 pm_caption += " [ɢɪᴛʜᴜʙ](https://github.com/rahulchoudhary17/DESTROYER-USERBOT) • [ɢʀᴏᴜᴘ](https://t.me/TEAM_DESTROYER_ON_STRICK)"
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern=r"alive"))
-@Destroyer.on(Destroyer_cmd(pattern=r"alive", allow_sudo=True))
+@fire.on(Destroyer_on_cmd(pattern=r"alive"))
+@fire.on(Destroyer_cmd(pattern=r"alive", allow_sudo=True))
 async def chris(alive):
     await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
