@@ -20,10 +20,10 @@ Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
 
-@Destroyer.on(
+@fire.on(
     Destroyer_on_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True)
 )
-@Destroyer.on(
+@fire.on(
    sudo _cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", allow_sudo=True)
 )
 async def variable(var):
@@ -114,8 +114,8 @@ async def variable(var):
             return await edit_or_reply(var, f"**{variable}**  `is not exists`")
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="usage$", outgoing=True))
-@Destroyer.on(sudo_cmd(pattern="usage$", allow_sudo=True))
+@fire.on(Destroyer_on_cmd(pattern="usage$", outgoing=True))
+@fire.on(sudo_cmd(pattern="usage$", allow_sudo=True))
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -200,8 +200,8 @@ def prettyjson(obj, indent=2, maxlinelength=80):
     return indentitems(items, indent, level=0)
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="logs$", outgoing=True))
-@Destroyer.on(sudo_cmd(pattern="logs$", allow_sudo=True))
+@fire.on(Destroyer_on_cmd(pattern="logs$", outgoing=True))
+@fire.on(sudo_cmd(pattern="logs$", allow_sudo=True))
 async def _(givelogs):
     try:
         Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
