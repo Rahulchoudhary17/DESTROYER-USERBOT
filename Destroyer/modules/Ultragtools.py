@@ -49,7 +49,7 @@ async def get_user_sender_id(user, event):
     return user_obj
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="ultragban ?(.*)"))
+@fire.on(Destroyer_on_cmd(pattern="ultragban ?(.*)"))
 async def gspider(Destroyer):
     lol = Destroyer
     sender = await lol.get_sender()
@@ -117,7 +117,7 @@ async def gspider(Destroyer):
     )
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="ultraungban ?(.*)"))
+@fire.on(Destroyer_on_cmd(pattern="ultraungban ?(.*)"))
 async def gspider(Destroyer):
     lol = Destroyer
     sender = await lol.get_sender()
@@ -183,7 +183,7 @@ async def gspider(Destroyer):
     )
 
 
-@Destroyer.on(ChatAction)
+@fire.on(ChatAction)
 async def handler(rkG):
     if rkG.user_joined or rkG.user_added:
         try:
@@ -214,7 +214,7 @@ async def handler(rkG):
                             return
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern=r"ultragmute ?(\d+)?"))
+@fire.on(Destroyer_on_cmd(pattern=r"ultragmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
@@ -246,7 +246,7 @@ async def startgmute(event):
         await event.edit("Here A Tape, Now Shutup \nGmuteD")
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern=r"ultraungmute ?(\d+)?"))
+@fire.on(Destroyer_on_cmd(pattern=r"ultraungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:
