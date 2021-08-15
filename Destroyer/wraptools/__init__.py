@@ -18,7 +18,7 @@ import re
 from telethon import events
 
 from var import Var
-from firebot import bot
+from Destroyer import bot
 from Destroyer.Configs import Config
 
 
