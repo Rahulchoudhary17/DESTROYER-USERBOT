@@ -10,7 +10,7 @@ from telethon import types
 from Destroyer.utils import admin_cmd
 
 
-@Destroyer.on(admin_cmd(pattern="bassbost ?(.*)"))
+@fire.on(admin_cmd(pattern="bassbost ?(.*)"))
 async def __(message):
     v = False
     accentuate_db = 40
