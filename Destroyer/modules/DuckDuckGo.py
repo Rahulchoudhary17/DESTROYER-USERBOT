@@ -5,7 +5,7 @@ from uniborg.util import Destroyer_on_cmd
 from Destroyer import CMD_HELP
 
 
-@Destroyer.on(fire_on_cmd("ducduckgo (.*)"))
+@fire.on(Destroyer_on_cmd("ducduckgo (.*)"))
 async def _(event):
     if event.fwd_from:
         return
