@@ -28,7 +28,7 @@ async def get_tz(con):
         return
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="weather(?: |$)(.*)"))
+@fire.on(Destroyer_on_cmd(pattern="weather(?: |$)(.*)"))
 async def get_weather(weather):
     """For .weather command, gets the current weather of a city."""
 
@@ -130,7 +130,7 @@ async def get_weather(weather):
     )
 
 
-@Destroyer.on(Destroyer_on_cmd(pattern="setcity(?: |$)(.*)"))
+@fire.on(Destroyer_on_cmd(pattern="setcity(?: |$)(.*)"))
 async def set_default_city(city):
     """For .ctime command, change the default virtualuserbot country for date and time commands."""
 
