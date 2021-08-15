@@ -11,7 +11,7 @@ import requests
 from telegraph import Telegraph
 
 from Destroyer import CMD_HELP
-from Destroyer.utils import edit_or_reply, fire_on_cmd, sudo_cmd
+from Destroyer.utils import edit_or_reply, Destroyer_on_cmd, sudo_cmd
 
 telegraph = Telegraph()
 tgnoob = telegraph.create_account(short_name="Fire 🇮🇳")
