@@ -1,1 +1,1 @@
-DESTROYER: python3 -m Destroyer
+DESTROYER: python3 -m start.py
